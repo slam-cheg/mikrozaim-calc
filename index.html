@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CALC</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="html-wrapper">
+			<div class="calculator">
+				<div class="calculator__rows calculator__top">
+					<div class="calculator__row">
+						<div class="calculator__row-text" id="calc-sum">
+							<p class="calculator__row-title">Сумма</p>
+							<p class="calculator__row-value"><span>30&nbsp;000</span>&nbsp;₽</p>
+						</div>
+						<div class="calculator__input">
+							<input class="calculator__input-range" type="range" name="sum" id="sum" min="5000" max="30000" step="500" value="5000" />
+							<div class="calculator__labels">
+								<span class="calculator__label">5&nbsp;000&nbsp;₽</span>
+								<span class="calculator__label">30&nbsp;000&nbsp;₽</span>
+							</div>
+						</div>
+					</div>
+					<div class="calculator__row">
+						<div class="calculator__row-text" id="calc-duration">
+							<p class="calculator__row-title">Срок</p>
+							<p class="calculator__row-value"><span id="duration-value">30</span>&nbsp;<span id="duration-value-unit">дней</span></p>
+						</div>
+						<div class="calculator__input">
+							<input class="calculator__input-range" type="range" name="dur" id="dur" min="1" max="30" step="1" value="1" />
+							<div class="calculator__labels">
+								<span class="calculator__label">1&nbsp;день</span>
+								<span class="calculator__label">30&nbsp;дней</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="calculator__rows calculator__middle">
+					<div class="calculator__row-text" id="calc-return">
+						<p class="calculator__row-title calculator__row-title_middle">Возвращаете</p>
+						<p class="calculator__row-value calculator__row-value_middle"><span>30&nbsp;000</span>&nbsp;₽</p>
+					</div>
+					<div class="calculator__row-text" id="calc-return">
+						<p class="calculator__row-title calculator__row-title_middle">До <span>(включительно)</span></p>
+						<p class="calculator__row-value calculator__row-value_middle"><span id="day">20</span>&nbsp;<span id="month">октября</span>&nbsp;<span id="year">2024</span></p>
+					</div>
+				</div>
+				<div class="calculator__rows calculator__bottom">
+					<a href="#" class="calculator__link">Получить деньги</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const allInputs = document.querySelectorAll(".calculator__input-range");
+			allInputs.forEach((input) => {
+				input.addEventListener("input", function () {
+					input.style.backgroundColor = "#fff";
+				});
+			});
+		</script>
+	</body>
+</html>
