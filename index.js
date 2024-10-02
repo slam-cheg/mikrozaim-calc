@@ -48,12 +48,12 @@ function calculate() {
 	calculatorButton.href = linkConstructor(sum, days, calculateDate().shortDate);
 }
 
-// Функция для создания ссылки на займ
+// Функция для создания ссылки на займ, где sum - запрашиваемая сумма, days - количество дней для займа, returnDate - дата возврата
 function linkConstructor(sum, days, returnDate) {
 	return `https://lk.profifinance.ru/start/credit?amount=${sum}&period=${days}&days=${returnDate}&utm_source=test`;
 }
 
-// Вспомогательная функция для форматирования даты
+// Вспомогательная функция для форматирования даты в двух форматах
 function formatDate(date) {
 	let formattedDate = date.toLocaleDateString("ru-RU", {
 		day: "2-digit",
