@@ -13,11 +13,26 @@ body {
 	width: 484px;
 	height: 584px;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	resize: both;
-	overflow: auto;
+	top: 0;
+	left: 0;
+
+	@media screen and (max-width: 1199px) {
+		width: 450px;
+		height: 556px;
+	}
+
+	@media screen and (max-width: 959px) {
+		width: 568px;
+	}
+
+	@media screen and (max-width: 639px) {
+		width: 434px;
+	}
+
+	@media screen and (max-width: 479px) {
+		width: 294px;
+		height: 418px;
+	}
 }
 
 .calculator {
@@ -31,8 +46,25 @@ body {
 	justify-content: space-between;
 	align-items: center;
 
+	@media screen and (max-width: 1199px) {
+		padding: 40px 32px;
+	}
+	@media screen and (max-width: 959px) {
+		padding: 40px 46px;
+	}
+	@media screen and (max-width: 639px) {
+		padding: 40px 34px 48px 34px;
+	}
+	@media screen and (max-width: 479px) {
+		padding: 24px 24px 32px 24px;
+	}
+
 	&__top {
 		gap: 30px;
+
+		@media screen and (max-width: 479px) {
+			gap: 22px;
+		}
 	}
 
 	&__rows {
@@ -65,6 +97,10 @@ body {
 		font-size: 16px;
 		line-height: 1;
 		font-weight: 400;
+
+		@media screen and (max-width: 479px) {
+			font-size: 12px;
+		}
 	}
 
 	&__row-text {
@@ -78,6 +114,16 @@ body {
 		font-size: 20px;
 		line-height: 1;
 		font-weight: 500;
+
+		@media screen and (max-width: 479px) {
+			font-size: 18px;
+		}
+
+		span {
+			@media screen and (max-width: 639px) {
+				display: none;
+			}
+		}
 	}
 
 	&__row-value {
@@ -86,13 +132,27 @@ body {
 		line-height: 1;
 		font-weight: 500;
 
+		@media screen and (max-width: 1199px) {
+			font-size: 28px;
+		}
+		@media screen and (max-width: 479px) {
+			font-size: 18px;
+		}
 		&_middle {
 			font-size: 20px;
+
+			@media screen and (max-width: 479px) {
+				font-size: 18px;
+			}
 		}
 	}
 
 	&__middle {
 		gap: 32px;
+
+		@media screen and (max-width: 479px) {
+			gap: 24px;
+		}
 	}
 
 	&__link {
@@ -113,6 +173,13 @@ body {
 		&:hover {
 			background-color: #1163ad;
 			transition: background-color 0.3s ease-in-out;
+		}
+		@media screen and (max-width: 639px) {
+			height: 56px;
+		}
+
+		@media screen and (max-width: 479px) {
+			font-size: 16px;
 		}
 	}
 }
